@@ -2,7 +2,7 @@
 	"name": "Umbraco S3 Storage Providers",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"shutdownAction": "stopCompose",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
