@@ -2,23 +2,33 @@
 	"name": "Umbraco S3 Storage Providers",
     "dockerComposeFile": "docker-compose.yml",
     "service": "devcontainer",
-	"workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   	"shutdownAction": "stopCompose",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [44335, 46057],
+	"forwardPorts": [44335, 46057, 9000],
 	"portsAttributes": {
 			"44335": {
 				"protocol": "https"
 			}
-	}
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "dotnet restore",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.vscodeintellicode-csharp"
+			]
+		}
+	},
 
 }
