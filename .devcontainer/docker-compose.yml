@@ -8,7 +8,15 @@ services:
 
   minioS3:
     image: minio/minio
+    ports:
+      - "9010:9000"
+      - "9011:9001"
+    volumes:
+      - minio_S3storage:/data
     environment:
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: admin@123  
     command: server --console-address ":9001" /data
+
+volumes:
+  minio_S3storage: {}
