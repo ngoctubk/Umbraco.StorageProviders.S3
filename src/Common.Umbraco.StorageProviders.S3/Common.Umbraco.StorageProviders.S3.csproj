@@ -5,6 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>Umbraco Storage Providers - Common S3 Blob Storage</Title>
+    <Authors>AnhNV</Authors>
     <PackageProjectUrl>https://github.com/ngoctubk/Umbraco.StorageProviders.S3</PackageProjectUrl>
     <RepositoryUrl>https://github.com/ngoctubk/Umbraco.StorageProviders.S3</RepositoryUrl>
     <PackageIcon>Logo.png</PackageIcon>

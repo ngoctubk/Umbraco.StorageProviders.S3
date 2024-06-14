@@ -30,7 +30,7 @@ namespace Common.Umbraco.StorageProviders.S3.ImageSharp
             _ = options.OnChange(OptionsOnChange);
         }
 
-        private void OptionsOnChange(S3FileSystemOptions options, string name)
+        private void OptionsOnChange(S3FileSystemOptions options, string? name)
         {
             if (name != _mediaFileSystemName) return;
 

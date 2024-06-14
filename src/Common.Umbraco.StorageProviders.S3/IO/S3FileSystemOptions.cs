@@ -33,13 +33,13 @@ namespace Common.Umbraco.StorageProviders.S3.IO
         [Required]
         public required string VirtualPath { get; set; }
 
-        public S3CannedACL CannedACL { get; set; }
+        public S3CannedACL? CannedACL { get; set; }
 
-        public ServerSideEncryptionMethod ServerSideEncryptionMethod { get; set; }
+        public ServerSideEncryptionMethod? ServerSideEncryptionMethod { get; set; }
 
-        public string ServiceUrl { get; set; }
+        public string? ServiceUrl { get; set; }
 
-        public string AccessKey { get; set; }
-        public string SecretKey { get; set; }
+        public string? AccessKey { get; set; }
+        public string? SecretKey { get; set; }
     }
 }

@@ -19,7 +19,7 @@ namespace Common.Umbraco.StorageProviders.S3.DependencyInjection
         public static IUmbracoBuilder AddS3ImageSharpCache(this IUmbracoBuilder builder)
                 => builder.AddInternal(S3FileSystemOptions.MediaFileSystemName, _cachePath);
 
-        internal static IUmbracoBuilder AddInternal(this IUmbracoBuilder builder, string mediaFileSystemName, string? cachePath)
+        internal static IUmbracoBuilder AddInternal(this IUmbracoBuilder builder, string mediaFileSystemName, string cachePath)
         {
             ArgumentNullException.ThrowIfNull(builder);
 

@@ -160,8 +160,8 @@ namespace Common.Umbraco.StorageProviders.S3.IO
                 Delimiter = Delimiter
             };
 
-            ListObjectsV2Response listObjectsResponse = null;
-            List<string> commonPrefixes = new();
+            ListObjectsV2Response listObjectsResponse;
+            List<string> commonPrefixes = [];
             do
             {
                 listObjectsResponse = Task.Run(async () => await _s3Client.ListObjectsV2Async(listObjectsRequest))
@@ -284,7 +284,7 @@ namespace Common.Umbraco.StorageProviders.S3.IO
             return stream;
         }
 
-        private string ResolveBucketPath(string path, bool isDir = false)
+        private string ResolveBucketPath(string? path, bool isDir = false)
         {
             if (string.IsNullOrEmpty(path))
                 return _bucketPrefix;
@@ -316,7 +316,7 @@ namespace Common.Umbraco.StorageProviders.S3.IO
 
         private string ResolveContentType(string filename)
         {
-            _ = _contentTypeProvider.TryGetContentType(filename, out string contentType);
+            _ = _contentTypeProvider.TryGetContentType(filename, out string? contentType);
             return contentType ?? "application/octet-stream";
         }
 

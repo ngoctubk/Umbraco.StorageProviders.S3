@@ -8,7 +8,7 @@ namespace Common.Umbraco.StorageProviders.S3.Common
     public class S3FileInfo : IFileInfo
     {
         private readonly S3Object _s3Object;
-        private readonly IAmazonS3? _s3Client;
+        private readonly IAmazonS3 _s3Client;
         private readonly string _bucketName;
 
         public S3FileInfo(S3Object s3Object, IAmazonS3 s3Client, string bucketName)
